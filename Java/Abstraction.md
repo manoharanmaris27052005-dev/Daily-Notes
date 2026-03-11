@@ -1,4 +1,4 @@
-# Day 6 - Abstraction
+#  Abstraction
 
 ## What is Abstraction
 Abstraction means hiding the implementation details and showing only the functionality to the user.
