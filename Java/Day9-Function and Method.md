@@ -1,5 +1,5 @@
 
-##Day9-Function and Method
+# Day9-Function and Method
 ## What is a Function
 
 A function is a block of code that performs a specific task.
