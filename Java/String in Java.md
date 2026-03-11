@@ -1,4 +1,4 @@
-# Day 8 - String in Java
+# String in Java
 
 ## What is String
 
