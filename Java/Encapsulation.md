@@ -1,4 +1,4 @@
-# Day 3 - Encapsulation
+#  Encapsulation
 
 ## What is Encapsulation
 Encapsulation is the process of wrapping data (variables) and code (methods) into a single unit.
