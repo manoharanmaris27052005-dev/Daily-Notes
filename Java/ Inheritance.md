@@ -1,4 +1,4 @@
-# Day 4 - Inheritance
+# Inheritance
 
 ## What is Inheritance
 Inheritance allows one class to acquire properties and methods of another class.
