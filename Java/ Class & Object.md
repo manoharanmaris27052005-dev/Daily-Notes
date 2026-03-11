@@ -1,4 +1,4 @@
-# Day 2 - Class and Object
+#  Class and Object
 
 ## What is a Class
 A class is a blueprint used to create objects.
