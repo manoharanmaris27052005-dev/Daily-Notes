@@ -1,2 +1,2 @@
- Daily Learning Notes
+ #Daily Learning Notes
 I will upload my daily learning notes
