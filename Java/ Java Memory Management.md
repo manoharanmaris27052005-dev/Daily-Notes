@@ -1,4 +1,4 @@
-# Day 7 - Java Memory Management
+#  Java Memory Management
 
 ## What is Memory Management
 
