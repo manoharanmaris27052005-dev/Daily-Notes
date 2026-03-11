@@ -1,4 +1,4 @@
-# Day 5 - Polymorphism
+#  Polymorphism
 
 ## What is Polymorphism
 Polymorphism means "many forms".
