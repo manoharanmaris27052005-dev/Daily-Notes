@@ -1,0 +1,308 @@
+# 🌱 Spring Framework – Complete Notes (Beginner to Intermediate)
+
+---
+
+## 🔹 What is Spring?
+
+Spring is a **Java framework** used to build **enterprise-level applications**.
+
+👉 It helps developers by:
+
+* Reducing boilerplate code
+* Managing objects automatically
+* Supporting web, database, security, etc.
+
+---
+
+## 🔹 Dependency Injection (DI)
+
+Dependency Injection means:
+👉 "Objects are not created manually, Spring will create and inject them."
+
+### Example:
+
+Instead of:
+
+```java
+Engine e = new Engine();
+Car c = new Car(e);
+```
+
+Spring will do:
+
+```java
+Car c = context.getBean(Car.class);
+```
+
+✔ Benefits:
+
+* Loose coupling
+* Easy testing
+* Better code management
+
+---
+
+## 🔹 Inversion of Control (IoC)
+
+IoC means:
+👉 Control of object creation is given to Spring
+
+👉 Normally:
+
+* You create objects
+
+👉 In Spring:
+
+* Spring creates objects
+
+✔ IoC Container manages everything
+
+---
+
+## 🔹 Beans
+
+Bean = Object managed by Spring
+
+Example:
+
+```java
+@Bean
+public Student student() {
+    return new Student();
+}
+```
+
+✔ Spring creates, manages, and destroys beans
+
+---
+
+## 🔹 BeanFactory vs ApplicationContext
+
+### BeanFactory
+
+* Basic container
+* Lazy loading (creates bean only when needed)
+
+### ApplicationContext
+
+* Advanced container
+* Eager loading (creates all beans at startup)
+* Supports:
+
+  * Events
+  * Internationalization
+  * AOP
+
+👉 Mostly we use **ApplicationContext**
+
+---
+
+## 🔹 Maven
+
+Maven is a **build tool** used to manage:
+
+* Dependencies (libraries)
+* Project build
+* Packaging
+
+---
+
+## 🔹 POM (Project Object Model)
+
+POM is an XML file (`pom.xml`) used in Maven.
+
+### Example:
+
+```xml
+<project>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
+</project>
+```
+
+---
+
+## 🔹 Spring Project Structure (Maven)
+
+```
+src/
+ ├── main/
+ │   ├── java/
+ │   │   └── com.example
+ │   ├── resources/
+ │   │   └── applicationContext.xml
+ │
+ └── test/
+
+pom.xml
+```
+
+---
+
+## 🔹 Java Class Creation (Simple Example)
+
+```java
+package com.example;
+
+public class Student {
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name);
+    }
+}
+```
+
+---
+
+## 🔹 XML Configuration (Structure + Example)
+
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.example.Student">
+        <property name="name" value="Maris" />
+    </bean>
+
+</beans>
+```
+
+---
+
+## 🔹 Annotation-Based Configuration (Structure + Example)
+
+### Student Class
+
+```java
+package com.example;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+    private String name = "Maris";
+
+    public void display() {
+        System.out.println("Name: " + name);
+    }
+}
+```
+
+### Main Class
+
+```java
+package com.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.example")
+class AppConfig {}
+
+public class MainApp {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Student s = context.getBean(Student.class);
+        s.display();
+    }
+}
+```
+
+---
+
+## 🔹 JDBC (Java Database Connectivity)
+
+JDBC is used to connect Java with Database.
+
+### Steps:
+
+1. Load driver
+2. Create connection
+3. Execute query
+4. Close connection
+
+---
+
+## 🔹 JSP (Java Server Pages)
+
+JSP is used to create **dynamic web pages**.
+
+👉 Used in view layer of MVC
+
+Example:
+
+```jsp
+<h1>Hello ${name}</h1>
+```
+
+---
+
+## 🔹 MVC Architecture
+
+MVC = Model + View + Controller
+
+### Model
+
+* Handles data
+* Example: Database, Java classes
+
+### View
+
+* UI (JSP, HTML)
+
+### Controller
+
+* Handles request
+* Connects Model and View
+
+---
+
+## 🔹 Flow of MVC
+
+```
+User → Controller → Model → Controller → View → User
+```
+
+---
+
+## 🔹 Summary
+
+| Concept | Meaning                  |
+| ------- | ------------------------ |
+| Spring  | Java framework           |
+| DI      | Inject dependencies      |
+| IoC     | Control given to Spring  |
+| Bean    | Object managed by Spring |
+| Maven   | Build tool               |
+| POM     | Maven config file        |
+| JDBC    | DB connection            |
+| JSP     | View technology          |
+| MVC     | Architecture pattern     |
+
+---
+
+## 🎯 Final Note
+
+Spring makes Java development:
+
+* Faster
+* Cleaner
+* More scalable
+
+---
+
+✨ Done! You can copy this as `README.md` or notes file.
