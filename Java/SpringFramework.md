@@ -1,4 +1,4 @@
-# 🌱 Spring Framework – Complete Notes (Beginner to Intermediate)
+# 🌱 Spring Framework 
 
 ---
 
@@ -277,32 +277,4 @@ MVC = Model + View + Controller
 User → Controller → Model → Controller → View → User
 ```
 
----
 
-## 🔹 Summary
-
-| Concept | Meaning                  |
-| ------- | ------------------------ |
-| Spring  | Java framework           |
-| DI      | Inject dependencies      |
-| IoC     | Control given to Spring  |
-| Bean    | Object managed by Spring |
-| Maven   | Build tool               |
-| POM     | Maven config file        |
-| JDBC    | DB connection            |
-| JSP     | View technology          |
-| MVC     | Architecture pattern     |
-
----
-
-## 🎯 Final Note
-
-Spring makes Java development:
-
-* Faster
-* Cleaner
-* More scalable
-
----
-
-✨ Done! You can copy this as `README.md` or notes file.
